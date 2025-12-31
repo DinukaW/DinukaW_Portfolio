@@ -61,101 +61,11 @@
           <div class="container">
             <div class="h4 text-center mb-4 title">Recent Posts <span><i class="fa fa-pencil"></i></span></div>
             
-            <div class="row">
-              <!-- Blog Post Card 1 -->
-              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
-                <div class="card blog-card">
-                  <div class="card-body">
-                    <h5 class="blog-card-title">Setting Up Kubernetes Cluster on AWS</h5>
-                    <p class="blog-card-description">
-                      A comprehensive guide to deploying and configuring a production-ready Kubernetes cluster on AWS using best practices for security and scalability.
-                    </p>
-                    <div class="blog-card-meta">
-                      <span class="blog-card-date"><i class="fa fa-calendar"></i> Dec 15, 2024</span>
-                      <a href="https://medium.com/@dinukaw95" target="_blank" class="blog-card-link">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Blog Post Card 2 -->
-              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500" data-aos-delay="100">
-                <div class="card blog-card">
-                  <div class="card-body">
-                    <h5 class="blog-card-title">CI/CD Pipeline Automation with ArgoCD</h5>
-                    <p class="blog-card-description">
-                      Learn how to implement GitOps workflows using ArgoCD for automated, declarative deployment pipelines that enhance reliability and speed.
-                    </p>
-                    <div class="blog-card-meta">
-                      <span class="blog-card-date"><i class="fa fa-calendar"></i> Nov 28, 2024</span>
-                      <a href="https://medium.com/@dinukaw95" target="_blank" class="blog-card-link">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Blog Post Card 3 -->
-              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500" data-aos-delay="200">
-                <div class="card blog-card">
-                  <div class="card-body">
-                    <h5 class="blog-card-title">Infrastructure as Code with Terraform</h5>
-                    <p class="blog-card-description">
-                      Explore advanced Terraform techniques for managing multi-cloud infrastructure efficiently while maintaining consistency and reproducibility.
-                    </p>
-                    <div class="blog-card-meta">
-                      <span class="blog-card-date"><i class="fa fa-calendar"></i> Nov 10, 2024</span>
-                      <a href="https://medium.com/@dinukaw95" target="_blank" class="blog-card-link">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Blog Post Card 4 -->
-              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
-                <div class="card blog-card">
-                  <div class="card-body">
-                    <h5 class="blog-card-title">Monitoring and Observability Best Practices</h5>
-                    <p class="blog-card-description">
-                      Deep dive into building robust monitoring solutions with Prometheus, Grafana, and custom metrics to ensure system reliability.
-                    </p>
-                    <div class="blog-card-meta">
-                      <span class="blog-card-date"><i class="fa fa-calendar"></i> Oct 22, 2024</span>
-                      <a href="https://medium.com/@dinukaw95" target="_blank" class="blog-card-link">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Blog Post Card 5 -->
-              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500" data-aos-delay="100">
-                <div class="card blog-card">
-                  <div class="card-body">
-                    <h5 class="blog-card-title">Securing Kubernetes Workloads</h5>
-                    <p class="blog-card-description">
-                      Essential security practices and tools for protecting your Kubernetes deployments from common vulnerabilities and threats.
-                    </p>
-                    <div class="blog-card-meta">
-                      <span class="blog-card-date"><i class="fa fa-calendar"></i> Oct 05, 2024</span>
-                      <a href="https://medium.com/@dinukaw95" target="_blank" class="blog-card-link">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Blog Post Card 6 -->
-              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500" data-aos-delay="200">
-                <div class="card blog-card">
-                  <div class="card-body">
-                    <h5 class="blog-card-title">Cost Optimization in Cloud Infrastructure</h5>
-                    <p class="blog-card-description">
-                      Practical strategies and tools for reducing cloud costs without sacrificing performance or reliability in AWS and GCP environments.
-                    </p>
-                    <div class="blog-card-meta">
-                      <span class="blog-card-date"><i class="fa fa-calendar"></i> Sep 18, 2024</span>
-                      <a href="https://medium.com/@dinukaw95" target="_blank" class="blog-card-link">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
+            <div class="row" id="blog-posts-container">
+              <!-- Blog posts will be loaded dynamically -->
+              <div class="col-12 text-center" style="padding: 40px;">
+                <i class="fa fa-spinner fa-spin fa-3x" style="color: #18ce0f;"></i>
+                <p style="margin-top: 20px; color: #666;">Loading latest posts from Medium...</p>
               </div>
             </div>
 
@@ -184,5 +94,6 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+    <script src="js/blog.js?ver=1.1.0"></script>
   </body>
 </html>
