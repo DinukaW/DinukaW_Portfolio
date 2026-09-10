@@ -5205,7 +5205,6 @@ Created using IcoMoon - icomoon.io
 
 /* Experience Style */
 .cc-experience .cc-experience-header {
-  padding-top: 60px;
   padding-right: 0;
   text-align: center;
   color: #fff;
@@ -5216,10 +5215,76 @@ Created using IcoMoon - icomoon.io
   margin-bottom: 0; }
 
 .cc-education .cc-education-header {
-  padding-top: 60px;
   padding-right: 0;
   text-align: center;
   color: #fff; }
+
+/* Qualification tabs - segmented control matching the site's card / button radius */
+.cc-education .nav-pills {
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+  border-radius: 0.1875rem;
+  overflow: hidden;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.12); }
+
+.cc-education .nav-pills .nav-item .nav-link {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 12px 30px;
+  border-radius: 0;
+  font-weight: 400;
+  color: #9A9A9A;
+  background-color: #fff;
+  white-space: nowrap; }
+
+.cc-education .nav-pills .nav-item + .nav-item .nav-link {
+  border-left: 1px solid #eee; }
+
+.cc-education .nav-pills .nav-item .nav-link:hover {
+  background-color: #f7f7f7;
+  color: #66615b; }
+
+.cc-education .nav-pills .nav-item .nav-link.active,
+.cc-education .nav-pills .nav-item .nav-link.active:focus,
+.cc-education .nav-pills .nav-item .nav-link.active:hover {
+  background-color: #2CA8FF;
+  color: #fff;
+  box-shadow: none; }
+
+@media (max-width: 575px) {
+  .cc-education .nav-pills .nav-item .nav-link {
+    padding: 11px 18px; } }
+
+/* Active section indicator for the navbar (scroll-spy) */
+.navbar .navbar-nav .nav-item .nav-link:not(.btn).active {
+  font-weight: 600; }
+
+.navbar .navbar-nav .nav-item .nav-link:not(.btn).active:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin: 1px auto 0;
+  background: currentColor; }
+
+/* Vertically centre both halves of the experience / qualification / contact cards
+   (replaces the fixed `padding-top: 60px` hack on the coloured panels) */
+.cc-experience .card .row > [class*="col-"],
+.cc-education .card .row > [class*="col-"] {
+  display: flex; }
+
+.cc-experience .card .card-body,
+.cc-education .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.cc-experience .cc-experience-header,
+.cc-education .cc-education-header {
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px; }
 
 /* References Style */
 .cc-reference .card {

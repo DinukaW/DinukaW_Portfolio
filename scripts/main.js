@@ -3,9 +3,35 @@
 
 $(document).ready(function() {
   AOS.init( {
-    // uncomment below for on-scroll animations to played only once
-    // once: true  
+    once: true // play each on-scroll animation only once, then leave it in place
   }); // initialize animate on scroll library
+
+  // Switching qualification tabs changes page height, which leaves AOS trigger
+  // points stale for sections below it (e.g. "Let's Connect"). Recalculate them
+  // whenever a tab is shown so those animations still fire. Also keep the
+  // aria-selected state in sync for screen readers.
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+    $(e.target).attr('aria-selected', 'true');
+    if (e.relatedTarget) {
+      $(e.relatedTarget).attr('aria-selected', 'false');
+    }
+    AOS.refresh();
+  });
+
+  // Keep the footer copyright year current.
+  var year = document.getElementById('footer-year');
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  // Highlight the nav link for the section currently in view.
+  $('body').scrollspy({ target: '#navigation', offset: 80 });
+});
+
+// Section offsets shift as fonts load and AOS elements settle - recalculate
+// scroll-spy positions once everything has loaded.
+$(window).on('load', function() {
+  $('body').scrollspy('refresh');
 });
 
 // Smooth scroll for links with hashes
